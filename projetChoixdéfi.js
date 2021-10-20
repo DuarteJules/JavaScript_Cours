@@ -24,6 +24,7 @@ let Ddiv1 = document.getElementById('div1')
 let Ddiv2 = document.getElementById('div2')
 let Ddiv3 = document.getElementById('div3')
 
+//Masquage du timer
 let DTime = document.getElementById('tmp')
 DTime.innerHTML = ''
 
@@ -38,6 +39,21 @@ function DFunDefi1(){
     timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
+    Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
+    <button id=Dpause>Pause</button>`
+    let Dgiveuppos = document.getElementById('Dgiveup')
+    Dgiveuppos.addEventListener('click',function(){
+        Ddiv1.innerHTML = ``
+        Ddiv2.innerHTML = ``
+        Ddiv3.innerHTML = ``
+        Ddivreg.innerHTML = Dreg
+        DTime.innerHTML = ''
+        let Ddefi1 = document.getElementById('button1')
+        Ddefi1.addEventListener('click',DFunDefi1)
+        let Ddefi2 = document.getElementById('button2')
+        Ddefi2.addEventListener('click',DFunDefi2)
+    })
+    let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
     <p>`+Dvalque+`</p>`
@@ -61,17 +77,29 @@ function DFunDefi2(){
     timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Incollable</b>`
+    Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
+    <button id=Dpause>Pause</button>`
+    let Dgiveuppos = document.getElementById('Dgiveup')
+    Dgiveuppos.addEventListener('click',function(){
+        Ddiv1.innerHTML = ``
+        Ddiv2.innerHTML = ``
+        Ddiv3.innerHTML = ``
+        Ddivreg.innerHTML = Dreg
+        DTime.innerHTML = ''
+        let Ddefi1 = document.getElementById('button1')
+        Ddefi1.addEventListener('click',DFunDefi1)
+        let Ddefi2 = document.getElementById('button2')
+        Ddefi2.addEventListener('click',DFunDefi2)
+    })
+    let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
     <p>`+Dvalque+`</p>`
     for(i=0;i<Dnomrep;i++){
         let Drep = document.createElement('li')
         Drep.setAttribute('id','Drep'+i)
-        Drep.innerHTML=`repDale`
+        Drep.innerHTML=`repjuhduhf`
         Ddivreg.appendChild(Drep)
         /*<li id=Drepi>repDale</li>*/
     }
-}
-if  (Time.innerHTML='00:00'){
-    window.confirm("temps écoulé")
 }
