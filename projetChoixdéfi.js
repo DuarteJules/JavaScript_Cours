@@ -58,10 +58,10 @@ function DFunDefi1(){
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
     <p>`+Question+`</p>
-    <li id=Drep1>`+jrep1+`</li>
-    <li id=Drep2>`+jrep2+`</li>
-    <li id=Drep3>`+jrep3+`</li>
-    <li id=Drep4>`+jrep4+`</li>`
+    <p id=Drep1>`+jrep1+`</p>
+    <p id=Drep2>`+jrep2+`</p>
+    <p id=Drep3>`+jrep3+`</p>
+    <p id=Drep4>`+jrep4+`</p>`
     let Drep3pos = document.getElementById('Drep3')
     if (Drep3pos.innerHTML == 'undefined'){
         Drep3pos.innerHTML = ''
@@ -101,9 +101,16 @@ function DFunDefi2(){
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
     <p>${Question}</p>
-    <li id=Drep1>`+jrep1+`</li>
-    <li id=Drep2>`+jrep2+`</li>
-    <li id=Drep3>`+jrep3+`</li>
-    <li id=Drep4>`+jrep4+`</li>`
-
+    <p id=Drep1>`+jrep1+`</p>
+    <p id=Drep2>`+jrep2+`</p>
+    <p id=Drep3>`+jrep3+`</p>
+    <p id=Drep4>`+jrep4+`</p>`
+    let Drep3pos = document.getElementById('Drep3')
+    if (Drep3pos.innerHTML == 'undefined'){
+        Drep3pos.innerHTML = ''
+    }
+    let Drep4pos = document.getElementById('Drep4')
+    if (Drep4pos.innerHTML == 'undefined'){
+        Drep4pos.innerHTML = ''
+    }
 }
