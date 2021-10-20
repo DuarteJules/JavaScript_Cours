@@ -21,7 +21,12 @@ function DFunDefi1(){
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
     Ddiv3.innerHTML = `<p>Bonne réponse/Dbon-Mauvaise réponse/Dmau</p>`
-    Ddivreg.innerHTML = ``
+    Ddivreg.innerHTML = `<b>Question n°Dquesactu:</b>
+    <p>Dvalque</p>
+    <li>repDale</li>
+    <li>repDale</li>
+    <li>repDale</li>
+    <li>repDale</li>`
 
 }
 
@@ -32,6 +37,11 @@ function DFunDefi2(){
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Incollable</b>`
     Ddiv3.innerHTML = `<p>Bonne réponse/Dbon-Mauvaise réponse/Dmau</p>`
-    Ddivreg.innerHTML =``
+    Ddivreg.innerHTML =`<b>Question n°Dquesactu:</b>
+    <p>Dvalque</p>
+    <li>repDale</li>
+    <li>repDale</li>
+    <li>repDale</li>
+    <li>repDale</li>`
 
 }
