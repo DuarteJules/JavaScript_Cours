@@ -1,3 +1,12 @@
+//Variable de test
+let Dnomrep = 4;
+
+//Variable utilisé dans les défi
+let Dbon = 0;
+let Dmau = 0;
+let Dquesactu = 0;
+let Dvalque = 'Qui va réussir le projet ?'
+
 //Récupération du bouton "défi 1" et création de l'évènement "cliquer sur le bouton"
 let Ddefi1 = document.getElementById('button1')
 Ddefi1.addEventListener('click',DFunDefi1)
@@ -16,34 +25,45 @@ let Ddiv3 = document.getElementById('div3')
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
+
+    //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
+
     let Dbooldef1 = true;
     console.log(Dbooldef1)
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
-    Ddiv3.innerHTML = `<p>Bonne réponse/Dbon-Mauvaise réponse/Dmau</p>`
-    Ddivreg.innerHTML = `<b>Question n°Dquesactu:</b>
-    <p>Dvalque</p>
-    <li id=Drep1>repDale</li>
-    <li id=Drep2>repDale</li>
-    <li id=Drep3>repDale</li>
-    <li id=Drep4>repDale</li>`
-
+    Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
+    Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
+    <p>`+Dvalque+`</p>`
+    for(i=0;i<Dnomrep;i++){
+    let Drep = document.createElement('li')
+    Drep.setAttribute('id','Drep'+i)
+    Drep.innerHTML=`repDale`
+    Ddivreg.appendChild(Drep)
+    /*<li id=Drepi>repDale</li>*/
+    }
 }
 
 //Création de la function s'occupant du défi 2
 function DFunDefi2(){
+
+    //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
+
     let Dbooldef1 = false;
     console.log(Dbooldef1)
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Incollable</b>`
-    Ddiv3.innerHTML = `<p>Bonne réponse/Dbon-Mauvaise réponse/Dmau</p>`
-    Ddivreg.innerHTML =`<b>Question n°Dquesactu:</b>
-    <p>Dvalque</p>
-    <li id=Drep1>repDale</li>
-    <li id=Drep2>repDale</li>
-    <li id=Drep3>repDale</li>
-    <li id=Drep4>repDale</li>`
+    Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
+    Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
+    <p>`+Dvalque+`</p>`
+    for(i=0;i<Dnomrep;i++){
+        let Drep = document.createElement('li')
+        Drep.setAttribute('id','Drep'+i)
+        Drep.innerHTML=`repDale`
+        Ddivreg.appendChild(Drep)
+        /*<li id=Drepi>repDale</li>*/
+    }
 
 }
