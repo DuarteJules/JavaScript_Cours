@@ -3,6 +3,7 @@ const jTimer = document.getElementById('tmp')
 //création de la variable pour le timer 
 let jtemps = 0
 
+
 function timer (bool){
     if (bool == true){
 
@@ -24,3 +25,4 @@ function timer (bool){
         
     }  
 }
+
