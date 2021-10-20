@@ -1,5 +1,6 @@
 //Variable de test
 let Dnomrep = 4;
+let Dbooldef1;
 
 //Variable utilisé dans les défi
 let Dbon = 0;
@@ -29,8 +30,9 @@ function DFunDefi1(){
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
 
-    var Dbooldef1 = true;
+    Dbooldef1 = true;
     console.log(Dbooldef1)
+    timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
@@ -43,6 +45,7 @@ function DFunDefi1(){
     Ddivreg.appendChild(Drep)
     /*<li id=Drepi>repDale</li>*/
     }
+
 }
 
 //Création de la function s'occupant du défi 2
@@ -51,8 +54,9 @@ function DFunDefi2(){
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
 
-    var Dbooldef1 = false;
+    Dbooldef1 = false;
     console.log(Dbooldef1)
+    timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Incollable</b>`
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
