@@ -13,6 +13,10 @@ function timer (bool){
     //Création de la fonction pour diminuer le temps
     setInterval(diminuerLeTemps, 1000)
     }
+    else{
+        jtemps = 20
+    setInterval(diminuerLeTemps,1000)
+    }
     
     function diminuerLeTemps (){
         let minutes = parseInt(jtemps / 60,10)
