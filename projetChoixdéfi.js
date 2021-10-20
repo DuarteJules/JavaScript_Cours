@@ -26,6 +26,7 @@ let Ddiv3 = document.getElementById('div3')
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
+    
 
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
@@ -38,14 +39,14 @@ function DFunDefi1(){
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
     <p>`+Dvalque+`</p>`
-    for(i=0;i<Dnomrep;i++){
+    for(let i=0;i<Dnomrep;i++){
     let Drep = document.createElement('li')
     Drep.setAttribute('id','Drep'+i)
     Drep.innerHTML=`repDale`
     Ddivreg.appendChild(Drep)
     /*<li id=Drepi>repDale</li>*/
     }
-
+    LHihglight()
 }
 
 //Création de la function s'occupant du défi 2
@@ -62,12 +63,13 @@ function DFunDefi2(){
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
     <p>`+Dvalque+`</p>`
-    for(i=0;i<Dnomrep;i++){
+    for(let i=0;i<Dnomrep;i++){
+        
         let Drep = document.createElement('li')
         Drep.setAttribute('id','Drep'+i)
         Drep.innerHTML=`repDale`
         Ddivreg.appendChild(Drep)
         /*<li id=Drepi>repDale</li>*/
     }
-
+    LHihglight()
 }
