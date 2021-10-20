@@ -7,6 +7,7 @@ let Dbon = 0;
 let Dmau = 0;
 let Dquesactu = 0;
 let Dvalque = 'Qui va réussir le projet ?'
+let Dreponse = []
 
 //Récupération du bouton "défi 1" et création de l'évènement "cliquer sur le bouton"
 let Ddefi1 = document.getElementById('button1')
@@ -28,10 +29,16 @@ let Ddiv3 = document.getElementById('div3')
 let DTime = document.getElementById('tmp')
 DTime.innerHTML = ''
 
+//Creation du tableau de réponse
+
+let DreponseTab = []
+DreponseTab.push(jrep1,jrep2,jrep3,jrep4)
+console.log(DreponseTab)
+
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
 
-    Dgetques()
+
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
 
@@ -50,6 +57,7 @@ function DFunDefi1(){
         Ddivreg.innerHTML = Dreg
         Dbooldef1 = 3;
         timer(Dbooldef1)
+
         let Ddefi1 = document.getElementById('button1')
         Ddefi1.addEventListener('click',DFunDefi1)
         let Ddefi2 = document.getElementById('button2')
@@ -76,7 +84,7 @@ LHihglight()
 
 //Création de la function s'occupant du défi 2
 function DFunDefi2(){
-    Dgetques()
+    
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
     Dbooldef1 = 2;
@@ -93,7 +101,8 @@ function DFunDefi2(){
         Ddiv3.innerHTML = ``
         Ddivreg.innerHTML = Dreg
         Dbooldef1 = 3;
-        timer(Dbooldef1)
+        let setID = timer(Dbooldef1)
+        clearInterval(setID)
         let Ddefi1 = document.getElementById('button1')
         Ddefi1.addEventListener('click',DFunDefi1)
         let Ddefi2 = document.getElementById('button2')
