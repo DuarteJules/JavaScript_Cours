@@ -59,10 +59,10 @@ function DFunDefi1(){
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
     <p>`+Question+`</p>
-    <p id=Drep1>`+jrep1+`</p>
-    <p id=Drep2>`+jrep2+`</p>
-    <p id=Drep3>`+jrep3+`</p>
-    <p id=Drep4>`+jrep4+`</p>`
+    <p id=Drep1 class = reponse>`+jrep1+`</p>
+    <p id=Drep2 class = reponse>`+jrep2+`</p>
+    <p id=Drep3 class = reponse>`+jrep3+`</p>
+    <p id=Drep4 class = reponse>`+jrep4+`</p>`
     let Drep3pos = document.getElementById('Drep3')
     if (Drep3pos.innerHTML == 'undefined'){
         Drep3pos.innerHTML = ''
@@ -71,7 +71,7 @@ function DFunDefi1(){
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
     }
-
+LHihglight()
 }
 
 //Création de la function s'occupant du défi 2
@@ -103,10 +103,10 @@ function DFunDefi2(){
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
     <p>${Question}</p>
-    <p id=Drep1>`+jrep1+`</p>
-    <p id=Drep2>`+jrep2+`</p>
-    <p id=Drep3>`+jrep3+`</p>
-    <p id=Drep4>`+jrep4+`</p>`
+    <p id=Drep1 class = reponse>`+jrep1+`</p>
+    <p id=Drep2 class = reponse>`+jrep2+`</p>
+    <p id=Drep3 class = reponse>`+jrep3+`</p>
+    <p id=Drep4 class = reponse>`+jrep4+`</p>`
     let Drep3pos = document.getElementById('Drep3')
     if (Drep3pos.innerHTML == 'undefined'){
         Drep3pos.innerHTML = ''
@@ -115,5 +115,6 @@ function DFunDefi2(){
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
     }
+    LHihglight()
 
 }

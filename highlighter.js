@@ -1,7 +1,7 @@
 let Lbool = false; 
 
 function LHihglight(){
-    let Lli = document.querySelectorAll('li');
+    let Lli = document.querySelectorAll('.reponse');
     console.log(Lli); 
     Lli.forEach(function(li, index){
         console.log(li,index)
