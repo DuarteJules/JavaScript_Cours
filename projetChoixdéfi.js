@@ -24,9 +24,9 @@ function DFunDefi1(){
     Ddivreg.innerHTML = `<b>Question n°Dquesactu:</b>
     <p>Dvalque</p>
     <li id=Drep1>repDale</li>
-    <li id=Drep1>repDale</li>
-    <li id=Drep1>repDale</li>
-    <li id=Drep1>repDale</li>`
+    <li id=Drep2>repDale</li>
+    <li id=Drep3>repDale</li>
+    <li id=Drep4>repDale</li>`
 
 }
 
