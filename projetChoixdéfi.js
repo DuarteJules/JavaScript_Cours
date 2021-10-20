@@ -30,10 +30,6 @@ DTime.innerHTML = ''
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
-<<<<<<< HEAD
-=======
-
->>>>>>> Jules
     Dgetques()
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
@@ -58,7 +54,6 @@ function DFunDefi1(){
         Ddefi2.addEventListener('click',DFunDefi2)
     })
     let Dpausepos = document.getElementById('Dpause')
-<<<<<<< HEAD
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>
@@ -102,15 +97,6 @@ function DFunDefi1(){
             Drep4pos.innerHTML = ''
         }
     })
-=======
-    Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
-    Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
-    <p>`+Question+`</p>
-    <p id=Drep1 class = reponse>`+jrep1+`</p>
-    <p id=Drep2 class = reponse>`+jrep2+`</p>
-    <p id=Drep3 class = reponse>`+jrep3+`</p>
-    <p id=Drep4 class = reponse>`+jrep4+`</p>`
->>>>>>> Jules
     let Drep3pos = document.getElementById('Drep3')
     Drep3pos.addEventListener('click',function(){
         Dgetques()
@@ -151,11 +137,7 @@ function DFunDefi1(){
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
     }
-<<<<<<< HEAD
     LHihglight()
-=======
-LHihglight()
->>>>>>> Jules
 }
 
 //Création de la function s'occupant du défi 2
@@ -183,7 +165,7 @@ function DFunDefi2(){
         Ddefi2.addEventListener('click',DFunDefi2)
     })
     let Dpausepos = document.getElementById('Dpause')
-<<<<<<< HEAD
+
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>${Question}</b>
@@ -227,15 +209,6 @@ function DFunDefi2(){
             Drep4pos.innerHTML = ''
         }
     })
-=======
-    Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
-    Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
-    <p>${Question}</p>
-    <p id=Drep1 class = reponse>`+jrep1+`</p>
-    <p id=Drep2 class = reponse>`+jrep2+`</p>
-    <p id=Drep3 class = reponse>`+jrep3+`</p>
-    <p id=Drep4 class = reponse>`+jrep4+`</p>`
->>>>>>> Jules
     let Drep3pos = document.getElementById('Drep3')
     Drep3pos.addEventListener('click',function(){
         Dgetques()
@@ -277,8 +250,4 @@ function DFunDefi2(){
         Drep4pos.innerHTML = ''
     }
     LHihglight()
-<<<<<<< HEAD
-=======
-
->>>>>>> Jules
 }
