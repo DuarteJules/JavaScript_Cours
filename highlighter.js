@@ -1,15 +1,15 @@
 
 //Création d'un fonction LHihglight
 function LHihglight(){
-    let Lli = document.querySelectorAll('li');
-    console.log(Lli); 
+    let Lp = document.querySelectorAll('p');
+    console.log(Lp); 
     //création d'une boucle que selectionne chacuns de mes éléments(et mes indexs mais pas important)
     
-    Lli.forEach(function(li, index){
-        console.log(li,index)
+    Lp.forEach(function(p, index){
+        console.log(p,index)
         // j'ajoute deux événement à mes éléments
-        li.addEventListener('mouseover',colorgreen)
-        li.addEventListener('mouseleave',colorNothing)
+        p.addEventListener('mouseover',colorgreen)
+        p.addEventListener('mouseleave',colorNothing)
     });
 
 

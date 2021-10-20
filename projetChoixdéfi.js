@@ -54,9 +54,9 @@ function DFunDefi1(){
         Ddefi2.addEventListener('click',DFunDefi2)
     })
     let Dpausepos = document.getElementById('Dpause')
-    Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
+    Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
-    <p>`+Question+`</p>
+    <b>`+Question+`</b>
     <p id=Drep1>`+jrep1+`</p>
     <p id=Drep2>`+jrep2+`</p>
     <p id=Drep3>`+jrep3+`</p>
@@ -69,6 +69,7 @@ function DFunDefi1(){
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
     }
+    LHihglight()
 }
 
 //Création de la function s'occupant du défi 2
@@ -96,9 +97,9 @@ function DFunDefi2(){
         Ddefi2.addEventListener('click',DFunDefi2)
     })
     let Dpausepos = document.getElementById('Dpause')
-    Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
+    Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
-    <p>${Question}</p>
+    <b>${Question}</b>
     <p id=Drep1>`+jrep1+`</p>
     <p id=Drep2>`+jrep2+`</p>
     <p id=Drep3>`+jrep3+`</p>
@@ -111,4 +112,5 @@ function DFunDefi2(){
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
     }
+    LHihglight()
 }
