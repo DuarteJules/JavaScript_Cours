@@ -30,7 +30,7 @@ DTime.innerHTML = ''
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
-
+    Dgetques()
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
 
@@ -57,19 +57,24 @@ function DFunDefi1(){
     let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
-    <p>`+Dvalque+`</p>`
-    for(i=0;i<Dnomrep;i++){
-    let Drep = document.createElement('li')
-    Drep.setAttribute('id','Drep'+i)
-    Drep.innerHTML=`repDale`
-    Ddivreg.appendChild(Drep)
-    /*<li id=Drepi>repDale</li>*/
+    <p>`+Question+`</p>
+    <li id=Drep1>`+jrep1+`</li>
+    <li id=Drep2>`+jrep2+`</li>
+    <li id=Drep3>`+jrep3+`</li>
+    <li id=Drep4>`+jrep4+`</li>`
+    let Drep3pos = document.getElementById('Drep3')
+    if (Drep3pos.innerHTML == 'undefined'){
+        Drep3pos.innerHTML = ''
+    }
+    let Drep4pos = document.getElementById('Drep4')
+    if (Drep4pos.innerHTML == 'undefined'){
+        Drep4pos.innerHTML = ''
     }
 }
 
 //Création de la function s'occupant du défi 2
 function DFunDefi2(){
-
+    Dgetques()
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
     Dbooldef1 = 2;
@@ -95,12 +100,10 @@ function DFunDefi2(){
     let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
     Ddivreg.innerHTML = `<b>Question n°`+Dquesactu+`:</b>
-    <p>`+Dvalque+`</p>`
-    for(i=0;i<Dnomrep;i++){
-        let Drep = document.createElement('li')
-        Drep.setAttribute('id','Drep'+i)
-        Drep.innerHTML=`repjuhduhf`
-        Ddivreg.appendChild(Drep)
-        /*<li id=Drepi>repDale</li>*/
-    }
+    <p>${Question}</p>
+    <li id=Drep1>`+jrep1+`</li>
+    <li id=Drep2>`+jrep2+`</li>
+    <li id=Drep3>`+jrep3+`</li>
+    <li id=Drep4>`+jrep4+`</li>`
+
 }
