@@ -24,6 +24,9 @@ let Ddiv1 = document.getElementById('div1')
 let Ddiv2 = document.getElementById('div2')
 let Ddiv3 = document.getElementById('div3')
 
+let DTime = document.getElementById('tmp')
+DTime.innerHTML = ''
+
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
 
@@ -45,7 +48,6 @@ function DFunDefi1(){
     Ddivreg.appendChild(Drep)
     /*<li id=Drepi>repDale</li>*/
     }
-
 }
 
 //Création de la function s'occupant du défi 2
@@ -69,5 +71,7 @@ function DFunDefi2(){
         Ddivreg.appendChild(Drep)
         /*<li id=Drepi>repDale</li>*/
     }
-
+}
+if  (Time.innerHTML='00:00'){
+    window.confirm("temps écoulé")
 }
