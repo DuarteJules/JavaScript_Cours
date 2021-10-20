@@ -15,7 +15,7 @@ function LHihglight(){
 
 function colorgreen(){
 let cases = this
-cases.style.color = 'red'
+cases.style.color= 'red'
 }
 
 function colorNothing(){
