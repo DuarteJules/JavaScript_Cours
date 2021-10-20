@@ -5,7 +5,7 @@ let jtemps = 0
 
 
 function timer (bool){
-    if (bool == true){
+    if (bool == 1){
 
         //Création du timer pour le jeu 1
     
@@ -13,9 +13,11 @@ function timer (bool){
     //Création de la fonction pour diminuer le temps
     setInterval(diminuerLeTemps, 1000)
     }
-    else{
+    else if (bool == 2){
         jtemps = 20
     setInterval(diminuerLeTemps,1000)
+    } if (bool == 3){
+        jtemps = 0
     }
     
     function diminuerLeTemps (){
@@ -26,7 +28,6 @@ function timer (bool){
         secondes = secondes < 10 ? "0" + secondes : secondes
         jTimer.innerText = `${minutes}:${secondes}`
         jtemps = jtemps <= 0 ? 0 : jtemps - 1
-        
     }  
 }
 

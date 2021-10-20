@@ -34,7 +34,7 @@ function DFunDefi1(){
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
 
-    Dbooldef1 = true;
+    Dbooldef1 = 1;
     console.log(Dbooldef1)
     timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
@@ -47,7 +47,8 @@ function DFunDefi1(){
         Ddiv2.innerHTML = ``
         Ddiv3.innerHTML = ``
         Ddivreg.innerHTML = Dreg
-        DTime.innerHTML = ''
+        Dbooldef1 = 3;
+        timer(Dbooldef1)
         let Ddefi1 = document.getElementById('button1')
         Ddefi1.addEventListener('click',DFunDefi1)
         let Ddefi2 = document.getElementById('button2')
@@ -71,8 +72,7 @@ function DFunDefi2(){
 
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
-
-    Dbooldef1 = false;
+    Dbooldef1 = 2;
     console.log(Dbooldef1)
     timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
@@ -85,7 +85,8 @@ function DFunDefi2(){
         Ddiv2.innerHTML = ``
         Ddiv3.innerHTML = ``
         Ddivreg.innerHTML = Dreg
-        DTime.innerHTML = ''
+        Dbooldef1 = 3;
+        timer(Dbooldef1)
         let Ddefi1 = document.getElementById('button1')
         Ddefi1.addEventListener('click',DFunDefi1)
         let Ddefi2 = document.getElementById('button2')
