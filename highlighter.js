@@ -17,8 +17,13 @@ function LHihglight(){
 
 // Je définis les événements de mes éléments 
 function colorgreen(){
+<<<<<<< HEAD
     let Lcases = this
     Lcases.style.color = 'red'
+=======
+let cases = this
+cases.style.color= 'red'
+>>>>>>> Jules
 }
 
 function colorNothing(){
