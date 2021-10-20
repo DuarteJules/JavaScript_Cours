@@ -1,7 +1,7 @@
 
 //Création d'un fonction LHihglight
 function LHihglight(){
-    let Lli = document.querySelectorAll('li');
+    let Lli = document.querySelectorAll('.reponse');
     console.log(Lli); 
     //création d'une boucle que selectionne chacuns de mes éléments(et mes indexs mais pas important)
     
