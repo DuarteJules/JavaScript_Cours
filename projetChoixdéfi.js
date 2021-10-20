@@ -35,7 +35,6 @@ function DFunDefi1(){
     let Dreg = Ddivreg.innerHTML;
 
     Dbooldef1 = 1;
-    console.log(Dbooldef1)
     timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
@@ -78,7 +77,6 @@ function DFunDefi2(){
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
     Dbooldef1 = 2;
-    console.log(Dbooldef1)
     timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Incollable</b>`
