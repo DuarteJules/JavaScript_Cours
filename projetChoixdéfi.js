@@ -16,6 +16,7 @@ let Ddiv3 = document.getElementById('div3')
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
+    let Dreg = Ddivreg.innerHTML;
     let Dbooldef1 = true;
     console.log(Dbooldef1)
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
@@ -32,6 +33,7 @@ function DFunDefi1(){
 
 //Création de la function s'occupant du défi 2
 function DFunDefi2(){
+    let Dreg = Ddivreg.innerHTML;
     let Dbooldef1 = false;
     console.log(Dbooldef1)
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
