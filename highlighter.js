@@ -1,10 +1,13 @@
-let Lbool = false; 
 
+//Création d'un fonction LHihglight
 function LHihglight(){
     let Lli = document.querySelectorAll('.reponse');
     console.log(Lli); 
+    //création d'une boucle que selectionne chacuns de mes éléments(et mes indexs mais pas important)
+    
     Lli.forEach(function(li, index){
         console.log(li,index)
+        // j'ajoute deux événement à mes éléments
         li.addEventListener('mouseover',colorgreen)
         li.addEventListener('mouseleave',colorNothing)
     });
@@ -12,15 +15,20 @@ function LHihglight(){
 
 }
 
-
+// Je définis les événements de mes éléments 
 function colorgreen(){
+<<<<<<< HEAD
+    let Lcases = this
+    Lcases.style.color = 'red'
+=======
 let cases = this
 cases.style.color= 'red'
+>>>>>>> Jules
 }
 
 function colorNothing(){
-let cases = this
-cases.style.color = 'black'
+    let Lcases = this
+    Lcases.style.color = 'black'
 }
 
 
