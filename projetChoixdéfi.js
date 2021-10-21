@@ -67,23 +67,13 @@ function DFunDefi1(){
     <button id=Dpause>Pause</button>`
     let Dgiveuppos = document.getElementById('Dgiveup')
     Dgiveuppos.addEventListener('click',function(){
-        /*Ddiv1.innerHTML = ``
-        Ddiv2.innerHTML = ``
-        Ddiv3.innerHTML = ``
-        Ddivreg.innerHTML = Dreg
-        Dbooldef1 = 3;
-        timer(Dbooldef1)
-        let Ddefi1 = document.getElementById('button1')
-        Ddefi1.addEventListener('click',DFunDefi1)
-        let Ddefi2 = document.getElementById('button2')
-        Ddefi2.addEventListener('click',DFunDefi2)*/
         window.location.reload()
     })
     let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>`
-    for(i=0;i<DreponseTab.length;i++){
+    for(i=1;i<DreponseTab.length+1;i++){
         let repi = document.createElement('p')
         repi.setAttribute('id','Drep'+i)
         repi.innerHTML=Drandomrep()
@@ -132,6 +122,9 @@ function DFunDefi2(){
        window.location.reload()  
     })
     let Dpausepos = document.getElementById('Dpause')
+    Dgiveuppos.addEventListener('click',function(){
+        
+    })
 
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
