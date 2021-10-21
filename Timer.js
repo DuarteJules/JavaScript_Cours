@@ -1,5 +1,5 @@
 //création de la div pour le timer
-const jTimer = document.getElementById('tmp')
+let jTimer = document.getElementById('tmp')
 //création de la variable pour le timer 
 let jtemps = 0
 let Lnewsec = true;
@@ -14,7 +14,7 @@ function diminuerLeTemps1 (){
     secondes = secondes < 10 ? "0" + secondes : secondes
     jTimer.innerText = `${minutes}:${secondes}`
     jtemps = jtemps <= 0 ? 0 : jtemps - 1
-    if ( (minutes  == 0 && secondes == 0) && Lnewsec ){
+    if ( (minutes  == 0 && secondes == 0) && Lnewsec && (Dbooldef1==1)){
         Lnewsec = false;
         let Ltpop = alert("Dommage ! ne te décourage pas")
         window.location.reload()

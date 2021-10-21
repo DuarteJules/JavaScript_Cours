@@ -17,15 +17,13 @@ function Dgetques() {
     jRandom = getRandomInt(allQuestions.length)
     }
     if (allQuestions[jRandom].quizz != 'pris'){
-
     Question = allQuestions[jRandom].quizz
     Dbonrep = allQuestions[jRandom].goodrep
     jrep1 = allQuestions[jRandom].rep1
     jrep2 = allQuestions[jRandom].rep2
     jrep3= allQuestions[jRandom].rep3
     jrep4 = allQuestions[jRandom].rep4
-
-
+    Dquespaus = allQuestions[jRandom].quizz
     allQuestions[jRandom].quizz='pris'
     console.log(allQuestions[jRandom].quizz)
     }
