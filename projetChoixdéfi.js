@@ -143,7 +143,7 @@ function DFunDefi1(){
 
 //Création de la function s'occupant du défi 2
 function DFunDefi2(){
-    
+    Dnewrep()
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
     Dbooldef1 = 2;
