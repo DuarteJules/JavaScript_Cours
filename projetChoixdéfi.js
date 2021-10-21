@@ -73,11 +73,21 @@ function DFunDefi1(){
     Dgiveuppos.addEventListener('click',function(){
         window.location.reload()
     })
+    let Dpause = true
     let Dpausepos = document.getElementById('Dpause')
+    Dpausepos.addEventListener('click',function(){
+        if (Dpause){
+        Dpausepos.innerHTML='Reprendre'
+        Dpause = false
+        }else{
+        Dpausepos.innerHTML='Pause'
+        Dpause = true
+        }
+    })
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>`
-    for(i=0;i<DreponseTab.length;i++){
+    for(i=1;i<DreponseTab.length+1;i++){
         let repi = document.createElement('p')
         repi.setAttribute('id','Drep'+i)
         repi.innerHTML=Drandomrep()
@@ -87,58 +97,22 @@ function DFunDefi1(){
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
-        Dnewrep()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+        console.log('Réponse 1')
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
-        Dnewrep()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+        console.log('Réponse 2')
     })
     let Drep3pos = document.getElementById('Drep3')
     if (Drep3pos != null){
     Drep3pos.addEventListener('click',function(){
-        Dnewrep
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+        console.log('Réponse 3')
     })
     }
     let Drep4pos = document.getElementById('Drep4')
     if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
-        Dgetques()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+        console.log('Réponse 4')
     })
     }
     
@@ -164,7 +138,15 @@ function DFunDefi2(){
        window.location.reload()  
     })
     let Dpausepos = document.getElementById('Dpause')
-
+    Dpausepos.addEventListener('click',function(){
+        if (Dpause){
+        Dpausepos.innerHTML='Reprendre'
+        Dpause = false
+        }else{
+        Dpausepos.innerHTML='Pause'
+        Dpause = true
+        }
+    })
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>${Question}</b>
@@ -175,74 +157,28 @@ function DFunDefi2(){
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
-        Dgetques()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
-        }
+
+        console.log('Réponse 1')
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
-        Dgetques()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
-        }
+        console.log('Réponse 2')
+
     })
     let Drep3pos = document.getElementById('Drep3')
     Drep3pos.addEventListener('click',function(){
-        Dgetques()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
-        }
+
+        console.log('Réponse 3')
+
     })
     if (Drep3pos.innerHTML == 'undefined'){
         Drep3pos.innerHTML = ''
     }
     let Drep4pos = document.getElementById('Drep4')
     Drep4pos.addEventListener('click',function(){
-        Dgetques()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
-        }
+
+        console.log('Réponse 4')
+
     })
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
