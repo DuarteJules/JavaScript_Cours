@@ -92,7 +92,7 @@ function DFunDefi1(){
     let Dquenpos = document.getElementById('Dquen')
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
-    Drep1pos.addEventListener('click',function(){
+    /*Drep1pos.addEventListener('click',function(){
         Dnewrep()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
@@ -103,9 +103,9 @@ function DFunDefi1(){
             repi.innerHTML=Drandomrep()
             Ddivreg.appendChild(repi)
         }
-    })
+    })*/
     let Drep2pos = document.getElementById('Drep2')
-    Drep2pos.addEventListener('click',function(){
+    /*Drep2pos.addEventListener('click',function(){
         Dnewrep()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
@@ -131,9 +131,9 @@ function DFunDefi1(){
             Ddivreg.appendChild(repi)
         }
     })
-    }
+    }*/
     let Drep4pos = document.getElementById('Drep4')
-    if (Drep4pos != null){
+    /*if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
         Dgetques()
         Dquesactu++
@@ -146,7 +146,7 @@ function DFunDefi1(){
             Ddivreg.appendChild(repi)
         }
     })
-    }
+    }*/
     LHihglight()
     Lpop()
 }
@@ -181,7 +181,7 @@ function DFunDefi2(){
     let Dquenpos = document.getElementById('Dquen')
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
-    Drep1pos.addEventListener('click',function(){
+    /*Drep1pos.addEventListener('click',function(){
         Dnewrep()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
@@ -192,9 +192,9 @@ function DFunDefi2(){
             repi.innerHTML=Drandomrep()
             Ddivreg.appendChild(repi)
         }
-    })
+    })*/
     let Drep2pos = document.getElementById('Drep2')
-    Drep2pos.addEventListener('click',function(){
+    /*Drep2pos.addEventListener('click',function(){
         Dnewrep()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
@@ -205,10 +205,10 @@ function DFunDefi2(){
             repi.innerHTML=Drandomrep()
             Ddivreg.appendChild(repi)
         }
-    })
+    })*/
     let Drep3pos = document.getElementById('Drep3')
     if (Drep3pos != null){
-    Drep3pos.addEventListener('click',function(){
+    /*Drep3pos.addEventListener('click',function(){
         Dnewrep
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
@@ -220,9 +220,9 @@ function DFunDefi2(){
             Ddivreg.appendChild(repi)
         }
     })
-    }
+    }*/
     let Drep4pos = document.getElementById('Drep4')
-    if (Drep4pos != null){
+    /*if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
         Dgetques()
         Dquesactu++
@@ -235,7 +235,7 @@ function DFunDefi2(){
             Ddivreg.appendChild(repi)
         }
     })
-    }
+    }*/
     LHihglight()
     Lpop()
-}
+}}
