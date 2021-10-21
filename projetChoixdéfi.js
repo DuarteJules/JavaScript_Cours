@@ -10,10 +10,12 @@ let Dvalque = 'Qui va réussir le projet ?'
 //Récupération du bouton "défi 1" et création de l'évènement "cliquer sur le bouton"
 let Ddefi1 = document.getElementById('button1')
 Ddefi1.addEventListener('click',DFunDefi1)
+Ddefi1.addEventListener('click',diminuerLeTemps)
 
 //Récupération du bouton "défi 2" et création de l'évènement "cliquer sur le bouton"
 let Ddefi2 = document.getElementById('button2')
 Ddefi2.addEventListener('click',DFunDefi2)
+Ddefi2.addEventListener('click',diminuerLeTemps)
 
 //Récupération de l'emplacement du choix du défi
 let Ddivreg = document.getElementById('regles')
@@ -60,9 +62,9 @@ function DFunDefi1(){
 
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
-
+    jtemps = 120
     Dbooldef1 = 1;
-    timer(Dbooldef1);
+    // timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
     Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
@@ -151,7 +153,8 @@ function DFunDefi2(){
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
     Dbooldef1 = 2;
-    timer(Dbooldef1);
+    jtemps = 20
+    // timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Incollable</b>`
     Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
@@ -169,7 +172,6 @@ function DFunDefi2(){
     <p id=Drep2>`+jrep2+`</p>
     <p id=Drep3>`+jrep3+`</p>
     <p id=Drep4>`+jrep4+`</p>`
-    let Dquenpos = document.getElementById('Dquen')
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
@@ -248,3 +250,5 @@ function DFunDefi2(){
     Lpop()
     LHihglight()
 }
+
+
