@@ -31,7 +31,6 @@ function diminuerLeTemps2 (){
      secondes = secondes < 10 ? "0" + secondes : secondes
      jTimer.innerText = `${minutes}:${secondes}`
      jtemps = jtemps <= 0 ? 0 : jtemps - 1
-     jtemps = jtemps >= 180 ? 180 : jtemps
  }, 1000)
  }  
  

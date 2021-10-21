@@ -42,7 +42,7 @@ if (jrep3 != undefined){
 if (jrep4 != undefined){
     DreponseTab.push(jrep4)
 }
-console.log(DreponseTab)
+//console.log(DreponseTab)
 }
 function Drandomrep(){
     let Drepran = (DreponseTab[getRandomInt(DreponseTab.length)])
@@ -105,11 +105,15 @@ function DFunDefi1(){
     Drep1pos.addEventListener('click',function(){
         console.log('Réponse 1')
         let rep = 1
+        // augmentation du timer en cas de bonne réponse
+        //augmentation du compteur de bonne réponse
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
             jtemps = jtemps >= 180 ? 180 : jtemps + 4
         }
+        // décrementation du timer en cas de mauvaise réponse
+        // décrementation du compteur de mauvaise réponse 
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
@@ -237,6 +241,7 @@ function DFunDefi2(){
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
         }
+        DFunDefi2()
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
@@ -250,6 +255,7 @@ function DFunDefi2(){
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
         }
+        DFunDefi2()
     })
     let Drep3pos = document.getElementById('Drep3')
     Drep3pos.addEventListener('click',function(){
@@ -263,6 +269,7 @@ function DFunDefi2(){
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
         }
+        DFunDefi2()
     })
     if (Drep3pos.innerHTML == 'undefined'){
         Drep3pos.innerHTML = ''
@@ -279,6 +286,7 @@ function DFunDefi2(){
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
         }
+        DFunDefi2()
     })
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
