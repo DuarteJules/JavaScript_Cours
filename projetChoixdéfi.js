@@ -10,10 +10,12 @@ let Dvalque = 'Qui va réussir le projet ?'
 //Récupération du bouton "défi 1" et création de l'évènement "cliquer sur le bouton"
 let Ddefi1 = document.getElementById('button1')
 Ddefi1.addEventListener('click',DFunDefi1)
+Ddefi1.addEventListener('click',diminuerLeTemps1)
 
 //Récupération du bouton "défi 2" et création de l'évènement "cliquer sur le bouton"
 let Ddefi2 = document.getElementById('button2')
 Ddefi2.addEventListener('click',DFunDefi2)
+Ddefi2.addEventListener('click',diminuerLeTemps2)
 
 //Récupération de l'emplacement du choix du défi
 let Ddivreg = document.getElementById('regles')
@@ -54,36 +56,38 @@ function Drandomrep(){
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
+
     //Dnewgame()
     Dnewrep()
+
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
-
+    jtemps = 10
     Dbooldef1 = 1;
-    timer(Dbooldef1);
+    // timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
     Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
     <button id=Dpause>Pause</button>`
     let Dgiveuppos = document.getElementById('Dgiveup')
     Dgiveuppos.addEventListener('click',function(){
-        /*Ddiv1.innerHTML = ``
-        Ddiv2.innerHTML = ``
-        Ddiv3.innerHTML = ``
-        Ddivreg.innerHTML = Dreg
-        Dbooldef1 = 3;
-        timer(Dbooldef1)
-        let Ddefi1 = document.getElementById('button1')
-        Ddefi1.addEventListener('click',DFunDefi1)
-        let Ddefi2 = document.getElementById('button2')
-        Ddefi2.addEventListener('click',DFunDefi2)*/
         window.location.reload()
     })
+    let Dpause = true
     let Dpausepos = document.getElementById('Dpause')
+    Dpausepos.addEventListener('click',function(){
+        if (Dpause){
+        Dpausepos.innerHTML='Reprendre'
+        Dpause = false
+        }else{
+        Dpausepos.innerHTML='Pause'
+        Dpause = true
+        }
+    })
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>`
-    for(i=0;i<DreponseTab.length;i++){
+    for(i=1;i<DreponseTab.length+1;i++){
         let repi = document.createElement('p')
         repi.setAttribute('id','Drep'+i)
         repi.innerHTML=Drandomrep()
@@ -111,6 +115,7 @@ function DFunDefi1(){
         console.log('Réponse 4')
     })
     }
+    
     LHihglight()
     Lpop()
 }
@@ -122,7 +127,8 @@ function DFunDefi2(){
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
     Dbooldef1 = 2;
-    timer(Dbooldef1);
+    jtemps = 20
+    // timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Incollable</b>`
     Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
@@ -132,38 +138,53 @@ function DFunDefi2(){
        window.location.reload()  
     })
     let Dpausepos = document.getElementById('Dpause')
-
+    Dpausepos.addEventListener('click',function(){
+        if (Dpause){
+        Dpausepos.innerHTML='Reprendre'
+        Dpause = false
+        }else{
+        Dpausepos.innerHTML='Pause'
+        Dpause = true
+        }
+    })
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
-    <b id=Dque>${Question}</b>`
-    for(i=0;i<DreponseTab.length;i++){
-        let repi = document.createElement('p')
-        repi.setAttribute('id','Drep'+i)
-        repi.innerHTML=Drandomrep()
-        Ddivreg.appendChild(repi)
-    }
-    let Dquenpos = document.getElementById('Dquen')
+    <b id=Dque>${Question}</b>
+    <p id=Drep1>`+jrep1+`</p>
+    <p id=Drep2>`+jrep2+`</p>
+    <p id=Drep3>`+jrep3+`</p>
+    <p id=Drep4>`+jrep4+`</p>`
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
+
         console.log('Réponse 1')
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
         console.log('Réponse 2')
+
     })
     let Drep3pos = document.getElementById('Drep3')
-    if (Drep3pos != null){
     Drep3pos.addEventListener('click',function(){
+
         console.log('Réponse 3')
+
     })
+    if (Drep3pos.innerHTML == 'undefined'){
+        Drep3pos.innerHTML = ''
     }
     let Drep4pos = document.getElementById('Drep4')
-    if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
+
         console.log('Réponse 4')
+
     })
+    if (Drep4pos.innerHTML == 'undefined'){
+        Drep4pos.innerHTML = ''
     }
-    LHihglight()
     Lpop()
+    LHihglight()
 }
+
+

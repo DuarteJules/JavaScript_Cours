@@ -20,7 +20,7 @@ reprendre.addEventListener('click', repr);
    }
 //Création de la fonction compteur
 let i = 0;
-   function compteur(){
+   function fcompteur(){
       i = i + 1;
       document.getElementById('Compteur').innerHTML += i ;
 }
