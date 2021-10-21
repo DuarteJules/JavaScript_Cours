@@ -12,14 +12,7 @@ let jrep4
 //attribution des variables
 function Dgetques() {
     jRandom = getRandomInt(allQuestions.length)
-<<<<<<< HEAD
-Question = allQuestions[jRandom].quizz
-jrep1 = allQuestions[jRandom].rep1
-jrep2 = allQuestions[jRandom].rep2
-jrep3= allQuestions[jRandom].rep3
-jrep4 = allQuestions[jRandom].rep4
 
-=======
     Question = allQuestions[jRandom].quizz
     jrep1 = allQuestions[jRandom].rep1
     jrep2 = allQuestions[jRandom].rep2
@@ -27,7 +20,7 @@ jrep4 = allQuestions[jRandom].rep4
     jrep4 = allQuestions[jRandom].rep4
     delete allQuestions.jRandom
     console.log(allQuestions)
->>>>>>> David
+
 }
 
 
