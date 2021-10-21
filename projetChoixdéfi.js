@@ -98,21 +98,81 @@ function DFunDefi1(){
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
         console.log('Réponse 1')
+<<<<<<< HEAD
+=======
+        let rep = 1
+        if(rep == Dbonrep){
+            Dbon++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps += 4
+            jtemps = jtemps >= 180 ? 180 : jtemps
+        }
+        else{
+            Dmau++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps -= 2
+        }
+>>>>>>> jules
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
         console.log('Réponse 2')
+<<<<<<< HEAD
+=======
+        let rep = 2
+        if(rep == Dbonrep){
+            Dbon++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps += 4
+            jtemps = jtemps >= 180 ? 180 : jtemps
+        }
+        else{
+            Dmau++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps -= 2
+        }
+>>>>>>> jules
     })
     let Drep3pos = document.getElementById('Drep3')
     if (Drep3pos != null){
     Drep3pos.addEventListener('click',function(){
         console.log('Réponse 3')
+<<<<<<< HEAD
+=======
+        let rep = 3
+        if(rep == Dbonrep){
+            Dbon++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps += 4
+            jtemps = jtemps >= 180 ? 180 : jtemps
+        }
+        else{
+            Dmau++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps -= 2
+        }
+>>>>>>> jules
     })
     }
     let Drep4pos = document.getElementById('Drep4')
     if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
         console.log('Réponse 4')
+<<<<<<< HEAD
+=======
+        let rep = 4
+        if(rep == Dbonrep){
+            Dbon++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps += 4
+            jtemps = jtemps >= 180 ? 180 : jtemps
+        }
+        else{
+            Dmau++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps -= 2
+        }
+>>>>>>> jules
     })
     }
     
@@ -161,6 +221,19 @@ function DFunDefi2(){
     Drep1pos.addEventListener('click',function(){
 
         console.log('Réponse 1')
+<<<<<<< HEAD
+=======
+        let rep = 1
+        if(rep == Dbonrep){
+            Dbon++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            
+        }
+        else{
+            Dmau++
+            Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+        }
+>>>>>>> jules
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){

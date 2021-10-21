@@ -27,4 +27,10 @@ function Dgetques() {
     allQuestions[jRandom].quizz='pris'
     console.log(allQuestions[jRandom].quizz)
     }
+<<<<<<< HEAD
 }
+=======
+
+}
+Dbonrep = allQuestions[jRandom].goodrep
+>>>>>>> jules
