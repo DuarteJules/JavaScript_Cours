@@ -69,7 +69,17 @@ function DFunDefi1(){
     Dgiveuppos.addEventListener('click',function(){
         window.location.reload()
     })
+    let Dpause = true
     let Dpausepos = document.getElementById('Dpause')
+    Dpausepos.addEventListener('click',function(){
+        if (Dpause){
+        Dpausepos.innerHTML='Reprendre'
+        Dpause = false
+        }else{
+        Dpausepos.innerHTML='Pause'
+        Dpause = true
+        }
+    })
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>`
@@ -122,10 +132,15 @@ function DFunDefi2(){
        window.location.reload()  
     })
     let Dpausepos = document.getElementById('Dpause')
-    Dgiveuppos.addEventListener('click',function(){
-        
+    Dpausepos.addEventListener('click',function(){
+        if (Dpause){
+        Dpausepos.innerHTML='Reprendre'
+        Dpause = false
+        }else{
+        Dpausepos.innerHTML='Pause'
+        Dpause = true
+        }
     })
-
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>${Question}</b>`
