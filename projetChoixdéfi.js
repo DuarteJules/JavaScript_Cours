@@ -54,6 +54,14 @@ function Drandomrep(){
     console.log(Drepran)
     return Drepran
 }
+function create(){
+    Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
+    <b id=Dque>${Question}</b>
+    <p id=Drep1>`+jrep1+`</p>
+    <p id=Drep2>`+jrep2+`</p>
+    <p id=Drep3>`+jrep3+`</p>
+    <p id=Drep4>`+jrep4+`</p>`
+}
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
@@ -68,22 +76,14 @@ function DFunDefi1(){
     // timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
-    Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
-    <button id=Dpause>Pause</button>`
+    let Dgivup = document.createElement('button')
+    Dgivup.setAttribute('id','Dgiveup')
+    Ddiv2.appendChild(Dgivup)
+    Dgivup.innerHTML = 'abbandonner'
+    createPauseButton();
     let Dgiveuppos = document.getElementById('Dgiveup')
     Dgiveuppos.addEventListener('click',function(){
         window.location.reload()
-    })
-    let Dpause = true
-    let Dpausepos = document.getElementById('Dpause')
-    Dpausepos.addEventListener('click',function(){
-        if (Dpause){
-        Dpausepos.innerHTML='Reprendre'
-        Dpause = false
-        }else{
-        Dpausepos.innerHTML='Pause'
-        Dpause = true
-        }
     })
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
@@ -177,32 +177,19 @@ function DFunDefi2(){
     let Dreg = Ddivreg.innerHTML;
     Dbooldef1 = 2;
     jtemps = 20
-    // timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Incollable</b>`
-    Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
-    <button id=Dpause>Pause</button>`
+    let Dgivup = document.createElement('button')
+    Dgivup.setAttribute('id','Dgiveup')
+    Ddiv2.appendChild(Dgivup)
+    Dgivup.innerHTML = 'abbandonner'
+    createPauseButton();
     let Dgiveuppos = document.getElementById('Dgiveup')
     Dgiveuppos.addEventListener('click',function(){
        window.location.reload()  
     })
-    let Dpausepos = document.getElementById('Dpause')
-    Dpausepos.addEventListener('click',function(){
-        if (Dpause){
-        Dpausepos.innerHTML='Reprendre'
-        Dpause = false
-        }else{
-        Dpausepos.innerHTML='Pause'
-        Dpause = true
-        }
-    })
     Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
-    Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
-    <b id=Dque>${Question}</b>
-    <p id=Drep1>`+jrep1+`</p>
-    <p id=Drep2>`+jrep2+`</p>
-    <p id=Drep3>`+jrep3+`</p>
-    <p id=Drep4>`+jrep4+`</p>`
+    create()
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
@@ -216,7 +203,9 @@ function DFunDefi2(){
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+    
         }
+        
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
@@ -230,6 +219,7 @@ function DFunDefi2(){
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
         }
+        
     })
     let Drep3pos = document.getElementById('Drep3')
     Drep3pos.addEventListener('click',function(){
@@ -243,6 +233,7 @@ function DFunDefi2(){
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
         }
+        
     })
     if (Drep3pos.innerHTML == 'undefined'){
         Drep3pos.innerHTML = ''
