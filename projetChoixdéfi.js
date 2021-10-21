@@ -1,13 +1,11 @@
 //Variable de test
-let Dnomrep = 4;
 let Dbooldef1;
-
+let Dnomrep;
 //Variable utilisé dans les défi
 let Dbon = 0;
 let Dmau = 0;
 let Dquesactu = 1;
 let Dvalque = 'Qui va réussir le projet ?'
-let Dreponse = []
 
 //Récupération du bouton "défi 1" et création de l'évènement "cliquer sur le bouton"
 let Ddefi1 = document.getElementById('button1')
@@ -30,10 +28,29 @@ let DTime = document.getElementById('tmp')
 DTime.innerHTML = ''
 
 //Creation du tableau de réponse
-
 let DreponseTab = []
-DreponseTab.push(jrep1,jrep2,jrep3,jrep4)
+function Dnewrep(){
+Dgetques()
+DreponseTab.push(jrep1,jrep2)
+if (jrep3 != undefined){
+    DreponseTab.push(jrep3)
+}
+if (jrep4 != undefined){
+    DreponseTab.push(jrep4)
+}
 console.log(DreponseTab)
+}
+function Drandomrep(){
+    let Drepran = (DreponseTab[getRandomInt(DreponseTab.length)])
+    while (Drepran == ''){
+        Drepran = (DreponseTab[getRandomInt(DreponseTab.length)])
+    }
+    let Drepranpos = DreponseTab.indexOf(Drepran)
+    console.log(Drepranpos)
+    DreponseTab[Drepranpos]=''
+    console.log(Drepran)
+    return Drepran
+}
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
@@ -50,90 +67,75 @@ function DFunDefi1(){
     let Dgiveuppos = document.getElementById('Dgiveup')
     Dgiveuppos.addEventListener('click',function(){
         window.location.reload()
+
     })
     let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
-    <b id=Dque>`+Question+`</b>
-    <p id=Drep1>`+jrep1+`</p>
-    <p id=Drep2>`+jrep2+`</p>
-    <p id=Drep3>`+jrep3+`</p>
-    <p id=Drep4>`+jrep4+`</p>`
+    <b id=Dque>`+Question+`</b>`
+    for(i=0;i<DreponseTab.length;i++){
+        let repi = document.createElement('p')
+        repi.setAttribute('id','Drep'+i)
+        repi.innerHTML=Drandomrep()
+        Ddivreg.appendChild(repi)
+    }
     let Dquenpos = document.getElementById('Dquen')
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
-        Dgetques()
+        Dnewrep()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
         Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
+        for(i=0;i<DreponseTab.length;i++){
+            let repi = document.createElement('p')
+            repi.setAttribute('id','Drep'+i)
+            repi.innerHTML=Drandomrep()
+            Ddivreg.appendChild(repi)
         }
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
-        Dgetques()
+        Dnewrep()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
         Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
+        for(i=0;i<DreponseTab.length;i++){
+            let repi = document.createElement('p')
+            repi.setAttribute('id','Drep'+i)
+            repi.innerHTML=Drandomrep()
+            Ddivreg.appendChild(repi)
         }
     })
     let Drep3pos = document.getElementById('Drep3')
+    if (Drep3pos != null){
     Drep3pos.addEventListener('click',function(){
-        Dgetques()
+        Dnewrep
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
         Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
+        for(i=0;i<DreponseTab.length;i++){
+            let repi = document.createElement('p')
+            repi.setAttribute('id','Drep'+i)
+            repi.innerHTML=Drandomrep()
+            Ddivreg.appendChild(repi)
         }
     })
-    if (Drep3pos.innerHTML == 'undefined'){
-        Drep3pos.innerHTML = ''
     }
     let Drep4pos = document.getElementById('Drep4')
+    if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
         Dgetques()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
         Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
+        for(i=0;i<DreponseTab.length;i++){
+            let repi = document.createElement('p')
+            repi.setAttribute('id','Drep'+i)
+            repi.innerHTML=Drandomrep()
+            Ddivreg.appendChild(repi)
         }
     })
-    if (Drep4pos.innerHTML == 'undefined'){
-        Drep4pos.innerHTML = ''
     }
     LHihglight()
 }
