@@ -10,13 +10,20 @@ let jrep3
 let jrep4 
 
 //attribution des variables
-console.log(allQuestions)
 function Dgetques(){
     jRandom = getRandomInt(allQuestions.length)
+    console.log(allQuestions[jRandom].quizz)
+    while (allQuestions[jRandom].quizz == 'pris'){
+    jRandom = getRandomInt(allQuestions.length)
+    }
+    if (allQuestions[jRandom].quizz != 'pris'){
     Question = allQuestions[jRandom].quizz
+    Dbonrep = allQuestions[jRandom].goodrep
     jrep1 = allQuestions[jRandom].rep1
     jrep2 = allQuestions[jRandom].rep2
     jrep3= allQuestions[jRandom].rep3
     jrep4 = allQuestions[jRandom].rep4
-    console.log(allQuestions)
+    allQuestions[jRandom].quizz='pris'
+    console.log(allQuestions[jRandom].quizz)
+    }
 }
