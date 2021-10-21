@@ -54,11 +54,7 @@ function Drandomrep(){
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
-<<<<<<< HEAD
     Dnewrep()
-=======
-
->>>>>>> Jules
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
 
@@ -70,8 +66,7 @@ function DFunDefi1(){
     <button id=Dpause>Pause</button>`
     let Dgiveuppos = document.getElementById('Dgiveup')
     Dgiveuppos.addEventListener('click',function(){
-<<<<<<< HEAD
-        Ddiv1.innerHTML = ``
+        /*Ddiv1.innerHTML = ``
         Ddiv2.innerHTML = ``
         Ddiv3.innerHTML = ``
         Ddivreg.innerHTML = Dreg
@@ -80,10 +75,8 @@ function DFunDefi1(){
         let Ddefi1 = document.getElementById('button1')
         Ddefi1.addEventListener('click',DFunDefi1)
         let Ddefi2 = document.getElementById('button2')
-        Ddefi2.addEventListener('click',DFunDefi2)
-=======
+        Ddefi2.addEventListener('click',DFunDefi2)*/
         window.location.reload()
->>>>>>> Jules
     })
     let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
@@ -154,6 +147,7 @@ function DFunDefi1(){
     })
     }
     LHihglight()
+    Lpop()
 }
 
 //Création de la function s'occupant du défi 2
@@ -241,4 +235,5 @@ function DFunDefi2(){
     })
     }
     LHihglight()
+    Lpop()
 }
