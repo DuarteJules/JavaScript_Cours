@@ -51,17 +51,7 @@ function DFunDefi1(){
     <button id=Dpause>Pause</button>`
     let Dgiveuppos = document.getElementById('Dgiveup')
     Dgiveuppos.addEventListener('click',function(){
-        Ddiv1.innerHTML = ``
-        Ddiv2.innerHTML = ``
-        Ddiv3.innerHTML = ``
-        Ddivreg.innerHTML = Dreg
-        Dbooldef1 = 3;
-        timer(Dbooldef1)
-
-        let Ddefi1 = document.getElementById('button1')
-        Ddefi1.addEventListener('click',DFunDefi1)
-        let Ddefi2 = document.getElementById('button2')
-        Ddefi2.addEventListener('click',DFunDefi2)
+        window.location.reload()
     })
     let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
@@ -96,17 +86,7 @@ function DFunDefi2(){
     <button id=Dpause>Pause</button>`
     let Dgiveuppos = document.getElementById('Dgiveup')
     Dgiveuppos.addEventListener('click',function(){
-        Ddiv1.innerHTML = ``
-        Ddiv2.innerHTML = ``
-        Ddiv3.innerHTML = ``
-        Ddivreg.innerHTML = Dreg
-        Dbooldef1 = 3;
-        let setID = timer(Dbooldef1)
-        clearInterval(setID)
-        let Ddefi1 = document.getElementById('button1')
-        Ddefi1.addEventListener('click',DFunDefi1)
-        let Ddefi2 = document.getElementById('button2')
-        Ddefi2.addEventListener('click',DFunDefi2)
+       window.location.reload()  
     })
     let Dpausepos = document.getElementById('Dpause')
     Ddiv3.innerHTML = `<p>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</p>`
