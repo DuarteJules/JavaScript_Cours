@@ -1,3 +1,4 @@
+//function Dnewgame(){
 let allQuestions = [
 {quizz:"Un de ces personnages ne fait pas partie des 7 nains :",goodrep:4,rep1:"Atchoum",rep2:"Dormeur",rep3:"Timide",rep4:"Chaude pisse"},
 {quizz:"Quelle variété de pigeons est aussi appelé palombe ?",goodrep:3,rep1:"Pigeon briset",rep2:"Pigeon colombin",rep3:"Pigeon ramier"},
@@ -2000,3 +2001,4 @@ let allQuestions = [
 {quizz:"En musique la gamme diatonique est composée de",goodrep:1,rep1:"5 tons et 2 demi-tons",rep2:"8 tons entiers",rep3:"12 tons entiers"},
 {quizz:"La bataille de diên biên phu fut :",goodrep:1,rep1:"Une défaite des forces françaises par les troupes viêt-minh",rep2:"La dernière victoire des troupes françaises en indochine",rep3:"Une célèbre défaite des troupes américaines au vietnam"},
 ]
+//}
