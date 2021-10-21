@@ -10,12 +10,12 @@ let Dvalque = 'Qui va réussir le projet ?'
 //Récupération du bouton "défi 1" et création de l'évènement "cliquer sur le bouton"
 let Ddefi1 = document.getElementById('button1')
 Ddefi1.addEventListener('click',DFunDefi1)
-Ddefi1.addEventListener('click',diminuerLeTemps)
+Ddefi1.addEventListener('click',diminuerLeTemps1)
 
 //Récupération du bouton "défi 2" et création de l'évènement "cliquer sur le bouton"
 let Ddefi2 = document.getElementById('button2')
 Ddefi2.addEventListener('click',DFunDefi2)
-Ddefi2.addEventListener('click',diminuerLeTemps)
+Ddefi2.addEventListener('click',diminuerLeTemps2)
 
 //Récupération de l'emplacement du choix du défi
 let Ddivreg = document.getElementById('regles')
@@ -62,7 +62,7 @@ function DFunDefi1(){
 
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
-    jtemps = 120
+    jtemps = 10
     Dbooldef1 = 1;
     // timer(Dbooldef1);
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
