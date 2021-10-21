@@ -93,7 +93,7 @@ function DFunDefi1(){
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>`
-    for(i=1;i<DreponseTab.length+1;i++){
+    for(i=1;i<4+1;i++){
         let repi = document.createElement('p')
         repi.setAttribute('id','Drep'+i)
         repi.innerHTML=Drandomrep()
@@ -108,6 +108,14 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            Dnewrep()
+            Dquesactu++
+            Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
+            <b id=Dque>`+Question+`</b>`
+            for(i=1;i<4+1;i++){
+                let Dnewrepi = document.getElementById('Drep'+1)
+                Dnewrepi.innerHTML = Drandomrep()
+            }
         }
         else{
             Dmau++
