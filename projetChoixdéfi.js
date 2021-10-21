@@ -92,61 +92,25 @@ function DFunDefi1(){
     let Dquenpos = document.getElementById('Dquen')
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
-    /*Drep1pos.addEventListener('click',function(){
-        Dnewrep()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
-    })*/
+    Drep1pos.addEventListener('click',function(){
+        console.log('Réponse 1')
+    })
     let Drep2pos = document.getElementById('Drep2')
-    /*Drep2pos.addEventListener('click',function(){
-        Dnewrep()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+    Drep2pos.addEventListener('click',function(){
+        console.log('Réponse 2')
     })
     let Drep3pos = document.getElementById('Drep3')
     if (Drep3pos != null){
     Drep3pos.addEventListener('click',function(){
-        Dnewrep
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+        console.log('Réponse 3')
     })
-    }*/
+    }
     let Drep4pos = document.getElementById('Drep4')
-    /*if (Drep4pos != null){
+    if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
-        Dgetques()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+        console.log('Réponse 4')
     })
-    }*/
+    }
     LHihglight()
     Lpop()
 }
@@ -181,61 +145,25 @@ function DFunDefi2(){
     let Dquenpos = document.getElementById('Dquen')
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
-    /*Drep1pos.addEventListener('click',function(){
-        Dnewrep()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
-    })*/
+    Drep1pos.addEventListener('click',function(){
+        console.log('Réponse 1')
+    })
     let Drep2pos = document.getElementById('Drep2')
-    /*Drep2pos.addEventListener('click',function(){
-        Dnewrep()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
-    })*/
+    Drep2pos.addEventListener('click',function(){
+        console.log('Réponse 2')
+    })
     let Drep3pos = document.getElementById('Drep3')
     if (Drep3pos != null){
-    /*Drep3pos.addEventListener('click',function(){
-        Dnewrep
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+    Drep3pos.addEventListener('click',function(){
+        console.log('Réponse 3')
     })
-    }*/
+    }
     let Drep4pos = document.getElementById('Drep4')
-    /*if (Drep4pos != null){
+    if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
-        Dgetques()
-        Dquesactu++
-        Dquen.innerHTML='Question n°'+Dquesactu
-        Dquepos.innerHTML=Question
-        for(i=0;i<DreponseTab.length;i++){
-            let repi = document.createElement('p')
-            repi.setAttribute('id','Drep'+i)
-            repi.innerHTML=Drandomrep()
-            Ddivreg.appendChild(repi)
-        }
+        console.log('Réponse 4')
     })
-    }*/
+    }
     LHihglight()
     Lpop()
-}}
+}
