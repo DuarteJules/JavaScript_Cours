@@ -137,7 +137,9 @@ function DFunDefi1(){
         }
     })
     }
+    
     LHihglight()
+    Lpop()
 }
 
 //Création de la function s'occupant du défi 2
@@ -240,5 +242,6 @@ function DFunDefi2(){
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
     }
+    Lpop()
     LHihglight()
 }
