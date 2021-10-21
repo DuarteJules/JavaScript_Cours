@@ -54,12 +54,10 @@ function Drandomrep(){
 
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
-<<<<<<< HEAD
 
-=======
     //Dnewgame()
     Dnewrep()
->>>>>>> David
+
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
 
