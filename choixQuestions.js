@@ -16,7 +16,4 @@ jrep1 = allQuestions[jRandom].rep1
 jrep2 = allQuestions[jRandom].rep2
 jrep3= allQuestions[jRandom].rep3
 jrep4 = allQuestions[jRandom].rep4
-<<<<<<< HEAD
-=======
-}
->>>>>>> David
+
