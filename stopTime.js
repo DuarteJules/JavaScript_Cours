@@ -16,7 +16,7 @@ document.getElementById("time left").innerHTML
 
 //Création de la fonction pour qui stop le temps
     if(total_seconds <=0){
-        setTimeout('document.quiz.submit()',1);
+        setTimeout('document.allQuestions.quizz()',1);
     } 
     else {
         total_seconds = total_seconds -1;
