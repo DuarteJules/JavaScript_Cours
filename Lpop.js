@@ -11,11 +11,4 @@ function Lpop(){
         
        let Lopen = alert('Dommage ! ne te décourage pas !')
     }
-    
-    function Lpop2(){
-
-    
-    }
-    
-
 }
