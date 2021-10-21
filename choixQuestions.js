@@ -31,6 +31,3 @@ function Dgetques() {
 
 }
 Dbonrep = allQuestions[jRandom].goodrep
-function test (){
-    console.log('test')
-}

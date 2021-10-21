@@ -103,10 +103,13 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps += 4
+            jtemps = jtemps >= 180 ? 180 : jtemps
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps -= 2
         }
     })
     let Drep2pos = document.getElementById('Drep2')
@@ -116,10 +119,13 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps += 4
+            jtemps = jtemps >= 180 ? 180 : jtemps
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps -= 2
         }
     })
     let Drep3pos = document.getElementById('Drep3')
@@ -130,10 +136,13 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps += 4
+            jtemps = jtemps >= 180 ? 180 : jtemps
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps -= 2
         }
     })
     }
@@ -141,14 +150,17 @@ function DFunDefi1(){
     if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
         console.log('Réponse 4')
-        let rep = 3
+        let rep = 4
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps += 4
+            jtemps = jtemps >= 180 ? 180 : jtemps
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps -= 2
         }
     })
     }
@@ -199,6 +211,7 @@ function DFunDefi2(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            
         }
         else{
             Dmau++
