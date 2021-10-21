@@ -22,15 +22,9 @@ function Dgetques() {
     jrep2 = allQuestions[jRandom].rep2
     jrep3= allQuestions[jRandom].rep3
     jrep4 = allQuestions[jRandom].rep4
+    Dbonrep = allQuestions[jRandom].goodrep
     Dquespaus = allQuestions[jRandom].quizz
     allQuestions[jRandom].quizz='pris'
     console.log(allQuestions[jRandom].quizz)
     }
-<<<<<<< HEAD
 }
-
-=======
-
-}
-Dbonrep = allQuestions[jRandom].goodrep
->>>>>>> Jules

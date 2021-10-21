@@ -33,6 +33,7 @@ DTime.innerHTML = ''
 //Creation du tableau de réponse
 let DreponseTab = []
 function Dnewrep(){
+DreponseTab = []
 Dgetques()
 DreponseTab.push(jrep1,jrep2)
 if (jrep3 != undefined){
@@ -92,7 +93,7 @@ function DFunDefi1(){
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>`
-    for(i=1;i<4+1;i++){
+    for(i=1;i<5;i++){
         let repi = document.createElement('p')
         repi.setAttribute('id','Drep'+i)
         repi.innerHTML=Drandomrep()
@@ -107,24 +108,25 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
-<<<<<<< HEAD
-            Dnewrep()
-            Dquesactu++
-            Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
-            <b id=Dque>`+Question+`</b>`
-            for(i=1;i<4+1;i++){
-                let Dnewrepi = document.getElementById('Drep'+1)
-                Dnewrepi.innerHTML = Drandomrep()
-            }
-=======
             jtemps = jtemps >= 180 ? 180 : jtemps + 4
->>>>>>> Jules
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
             jtemps = jtemps - 2
         }
+        Dnewrep()
+            Dquesactu++
+            Dquenpos.innerHTML = `Question n°`+Dquesactu+`:`
+            Dquepos.innerHTML = `<b id=Dque>`+Question+`</b>`
+            let newrepi = Drandomrep()
+            Drep1pos.innerHTML = newrepi
+            newrepi = Drandomrep()
+            Drep2pos.innerHTML = newrepi
+            newrepi = Drandomrep()
+            Drep3pos.innerHTML = newrepi
+            newrepi = Drandomrep()
+            Drep4pos.innerHTML = newrepi
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
