@@ -177,86 +177,70 @@ function DFunDefi2(){
 
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
-    <b id=Dque>${Question}</b>
-    <p id=Drep1>`+jrep1+`</p>
-    <p id=Drep2>`+jrep2+`</p>
-    <p id=Drep3>`+jrep3+`</p>
-    <p id=Drep4>`+jrep4+`</p>`
+    <b id=Dque>${Question}</b>`
+    for(i=0;i<DreponseTab.length;i++){
+        let repi = document.createElement('p')
+        repi.setAttribute('id','Drep'+i)
+        repi.innerHTML=Drandomrep()
+        Ddivreg.appendChild(repi)
+    }
     let Dquenpos = document.getElementById('Dquen')
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
-        Dgetques()
+        Dnewrep()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
         Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
+        for(i=0;i<DreponseTab.length;i++){
+            let repi = document.createElement('p')
+            repi.setAttribute('id','Drep'+i)
+            repi.innerHTML=Drandomrep()
+            Ddivreg.appendChild(repi)
         }
     })
     let Drep2pos = document.getElementById('Drep2')
     Drep2pos.addEventListener('click',function(){
-        Dgetques()
+        Dnewrep()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
         Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
+        for(i=0;i<DreponseTab.length;i++){
+            let repi = document.createElement('p')
+            repi.setAttribute('id','Drep'+i)
+            repi.innerHTML=Drandomrep()
+            Ddivreg.appendChild(repi)
         }
     })
     let Drep3pos = document.getElementById('Drep3')
+    if (Drep3pos != null){
     Drep3pos.addEventListener('click',function(){
-        Dgetques()
+        Dnewrep
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
         Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
+        for(i=0;i<DreponseTab.length;i++){
+            let repi = document.createElement('p')
+            repi.setAttribute('id','Drep'+i)
+            repi.innerHTML=Drandomrep()
+            Ddivreg.appendChild(repi)
         }
     })
-    if (Drep3pos.innerHTML == 'undefined'){
-        Drep3pos.innerHTML = ''
     }
     let Drep4pos = document.getElementById('Drep4')
+    if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
         Dgetques()
         Dquesactu++
         Dquen.innerHTML='Question n°'+Dquesactu
         Dquepos.innerHTML=Question
-        Drep1pos.innerHTML=jrep1
-        Drep2pos.innerHTML=jrep2
-        Drep3pos.innerHTML=jrep3
-        Drep4pos.innerHTML=jrep4
-        if (Drep3pos.innerHTML == 'undefined'){
-            Drep3pos.innerHTML = ''
-        }
-        if (Drep4pos.innerHTML == 'undefined'){
-            Drep4pos.innerHTML = ''
+        for(i=0;i<DreponseTab.length;i++){
+            let repi = document.createElement('p')
+            repi.setAttribute('id','Drep'+i)
+            repi.innerHTML=Drandomrep()
+            Ddivreg.appendChild(repi)
         }
     })
-    if (Drep4pos.innerHTML == 'undefined'){
-        Drep4pos.innerHTML = ''
     }
     LHihglight()
 }
