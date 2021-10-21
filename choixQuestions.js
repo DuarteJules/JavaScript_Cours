@@ -17,5 +17,6 @@ function Dgetques(){
     jrep2 = allQuestions[jRandom].rep2
     jrep3= allQuestions[jRandom].rep3
     jrep4 = allQuestions[jRandom].rep4
-    
+    delete allQuestions.jRandom
+    console.log(allQuestions)
 }
