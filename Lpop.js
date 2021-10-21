@@ -2,7 +2,6 @@
 function Lpop(){
     // je relis nouvelle variable Lopopu à l'id de mon bouton abandonner
     let Lopopu = document.getElementById('Dgiveup')
-    console.log(Lopopu)
     // je rajoute l'événement click sur une fonction appelé ouvre
     Lopopu.addEventListener('click',ouvre)
 

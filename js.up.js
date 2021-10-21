@@ -16,7 +16,6 @@ const button2 = document.getElementById('button2');
     
     let questions = JSON.stringify(allQuestions);
     for (let value in questions){
-        console.log(value + " / " + questions[value])
         localStorage.setItem(value, questions[value]);
 
         let questions = JSON.stringify(allQuestions);
