@@ -64,8 +64,7 @@ function DFunDefi1(){
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
     jtemps = 120
-    Dbooldef1 = 1;
-    // timer(Dbooldef1);
+
     //Modification de la page pour cacher le choix du défi et afficher les informations du défi
     Ddiv1.innerHTML = `<b>Défi Chrono</b>`
     Ddiv2.innerHTML = `<button id=Dgiveup>Abandonner</button>
@@ -103,10 +102,12 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps = jtemps >= 180 ? 180 : jtemps + 4
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps = jtemps - 2
         }
     })
     let Drep2pos = document.getElementById('Drep2')
@@ -116,10 +117,12 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps = jtemps >= 180 ? 180 : jtemps + 4
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps = jtemps - 2
         }
     })
     let Drep3pos = document.getElementById('Drep3')
@@ -130,10 +133,12 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps = jtemps >= 180 ? 180 : jtemps + 4
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps = jtemps - 2
         }
     })
     }
@@ -141,14 +146,16 @@ function DFunDefi1(){
     if (Drep4pos != null){
     Drep4pos.addEventListener('click',function(){
         console.log('Réponse 4')
-        let rep = 3
+        let rep = 4
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps = jtemps >= 180 ? 180 : jtemps + 4
         }
         else{
             Dmau++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            jtemps = jtemps - 2
         }
     })
     }
@@ -237,7 +244,7 @@ function DFunDefi2(){
     let Drep4pos = document.getElementById('Drep4')
     Drep4pos.addEventListener('click',function(){
         console.log('Réponse 4')
-        let rep = 1
+        let rep = 4
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
