@@ -74,9 +74,10 @@ function DFunDefi1(){
     Dgiveuppos.addEventListener('click',function(){
         window.location.reload()
     })
-    let Dpause = true
+    // let Dpause = true
     let Dpausepos = document.getElementById('Dpause')
     Dpausepos.addEventListener('click',function(){
+        let Dtempsav = jtemps
         if (Dpause){
         Dpausepos.innerHTML='Reprendre'
         Dpause = false
@@ -84,11 +85,15 @@ function DFunDefi1(){
         Dpausepos.innerHTML='Pause'
         Dpause = true
         }
+        if (Dtempsav!=jtemps){
+            jtemps=Dpause
+        }
     })
+
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>`
-    for(i=1;i<DreponseTab.length+1;i++){
+    for(i=1;i<4+1;i++){
         let repi = document.createElement('p')
         repi.setAttribute('id','Drep'+i)
         repi.innerHTML=Drandomrep()
@@ -103,6 +108,14 @@ function DFunDefi1(){
         if(rep == Dbonrep){
             Dbon++
             Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
+            Dnewrep()
+            Dquesactu++
+            Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
+            <b id=Dque>`+Question+`</b>`
+            for(i=1;i<4+1;i++){
+                let Dnewrepi = document.getElementById('Drep'+1)
+                Dnewrepi.innerHTML = Drandomrep()
+            }
         }
         else{
             Dmau++
@@ -176,9 +189,15 @@ function DFunDefi2(){
     })
     let Dpausepos = document.getElementById('Dpause')
     Dpausepos.addEventListener('click',function(){
+        let Dtempsav = jtemps
         if (Dpause){
         Dpausepos.innerHTML='Reprendre'
         Dpause = false
+            while (Dpause == false){
+                if (Dtempsav!=jtemps){
+                    jtemps=Dpause
+                }
+            }
         }else{
         Dpausepos.innerHTML='Pause'
         Dpause = true
@@ -186,11 +205,13 @@ function DFunDefi2(){
     })
     Ddiv3.innerHTML = `<b>Bonne réponse / `+Dbon+` -Mauvaise réponse / `+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
-    <b id=Dque>${Question}</b>
-    <p id=Drep1>`+jrep1+`</p>
-    <p id=Drep2>`+jrep2+`</p>
-    <p id=Drep3>`+jrep3+`</p>
-    <p id=Drep4>`+jrep4+`</p>`
+    <b id=Dque>${Question}</b>`
+    for(i=1;i<DreponseTab.length+1;i++){
+        let repi = document.createElement('p')
+        repi.setAttribute('id','Drep'+i)
+        repi.innerHTML=Drandomrep()
+        Ddivreg.appendChild(repi)
+    }
     let Dquepos = document.getElementById('Dque')
     let Drep1pos = document.getElementById('Drep1')
     Drep1pos.addEventListener('click',function(){
