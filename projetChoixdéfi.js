@@ -75,7 +75,7 @@ function DFunDefi1(){
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
     <b id=Dque>`+Question+`</b>`
-    for(i=0;i<DreponseTab.length;i++){
+    for(i=1;i<DreponseTab.length+1;i++){
         let repi = document.createElement('p')
         repi.setAttribute('id','Drep'+i)
         repi.innerHTML=Drandomrep()
@@ -125,6 +125,9 @@ function DFunDefi2(){
        window.location.reload()  
     })
     let Dpausepos = document.getElementById('Dpause')
+    Dgiveuppos.addEventListener('click',function(){
+        
+    })
 
     Ddiv3.innerHTML = `<b>Bonne réponse/`+Dbon+`-Mauvaise réponse/`+Dmau+`</b>`
     Ddivreg.innerHTML = `<b id=Dquen>Question n°`+Dquesactu+`:</b>
