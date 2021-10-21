@@ -55,6 +55,9 @@ function Drandomrep(){
 //Création de la function s'occupant du défi 1
 function DFunDefi1(){
 
+    //Dnewgame()
+    Dnewrep()
+
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
 
@@ -143,7 +146,8 @@ function DFunDefi1(){
 
 //Création de la function s'occupant du défi 2
 function DFunDefi2(){
-    
+    //Dnewgame()
+    Dnewrep()
     //Sauvegarde du texte présent dans le Ddivreg
     let Dreg = Ddivreg.innerHTML;
     Dbooldef1 = 2;
