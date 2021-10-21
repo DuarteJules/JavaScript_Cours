@@ -10,13 +10,11 @@ let jrep3
 let jrep4 
 
 //attribution des variables
-jRandom = getRandomInt(allQuestions.length)
-Question = allQuestions[jRandom].quizz
-jrep1 = allQuestions[jRandom].rep1
-jrep2 = allQuestions[jRandom].rep2
-jrep3= allQuestions[jRandom].rep3
-jrep4 = allQuestions[jRandom].rep4
-<<<<<<< HEAD
+function Dgetques(){
+    jRandom = getRandomInt(allQuestions.length)
+    Question = allQuestions[jRandom].quizz
+    jrep1 = allQuestions[jRandom].rep1
+    jrep2 = allQuestions[jRandom].rep2
+    jrep3= allQuestions[jRandom].rep3
+    jrep4 = allQuestions[jRandom].rep4
 }
-=======
->>>>>>> Jules
