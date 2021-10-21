@@ -76,19 +76,16 @@ function DFunDefi1(){
     // let Dpause = true
     let Dpausepos = document.getElementById('Dpause')
     Dpausepos.addEventListener('click',function(){
-        if(jTimer <= 0){
-            setTimeout('timer()',1);
-        } 
-        else {
-            jTimer = jTimer -1;
-        setTimeout('timer()',1000);
-            }
+        let Dtempsav = jtemps
         if (Dpause){
         Dpausepos.innerHTML='Reprendre'
         Dpause = false
         }else{
         Dpausepos.innerHTML='Pause'
         Dpause = true
+        }
+        if (Dtempsav!=jtemps){
+            jtemps=Dpause
         }
     })
 
@@ -147,16 +144,15 @@ function DFunDefi2(){
     })
     let Dpausepos = document.getElementById('Dpause')
     Dpausepos.addEventListener('click',function(){
-        if(jTimer <= 0){
-            setTimeout('timer()',1);
-        } 
-        else {
-            jTimer = jTimer -1;
-        setTimeout('timer()',1000);
-            }
+        let Dtempsav = jtemps
         if (Dpause){
         Dpausepos.innerHTML='Reprendre'
         Dpause = false
+            while (Dpause == false){
+                if (Dtempsav!=jtemps){
+                    jtemps=Dpause
+                }
+            }
         }else{
         Dpausepos.innerHTML='Pause'
         Dpause = true
@@ -198,9 +194,6 @@ function DFunDefi2(){
     })
     if (Drep4pos.innerHTML == 'undefined'){
         Drep4pos.innerHTML = ''
-    }
-    if (jtemps==0){
-        jtemps=20;
     }
     Lpop()
     LHihglight()
