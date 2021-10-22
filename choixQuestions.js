@@ -21,13 +21,21 @@ function Dgetques() {
     Question = allQuestions[jRandom].quizz
     jrep1 = allQuestions[jRandom].rep1
     jrep2 = allQuestions[jRandom].rep2
-    jrep3= allQuestions[jRandom].rep3
+    jrep3 = allQuestions[jRandom].rep3
     jrep4 = allQuestions[jRandom].rep4
-
-
-    allQuestions[jRandom].quizz='pris'
-    console.log(allQuestions[jRandom].quizz)
+    
+    if (typeof(jrep3) == 'undefined'){
+        console.log('jrep3')
+        jrep3 = ''
     }
-
+    if (typeof(jrep4) == 'undefined'){
+        console.log('jrep4')
+        jrep4 = ''
+    }
+    allQuestions[jRandom].quizz='pris'
+    }
+    Dbonrep = allQuestions[jRandom].goodrep
 }
-Dbonrep = allQuestions[jRandom].goodrep
+
+
+

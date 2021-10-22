@@ -15,8 +15,8 @@ function pauseInterval() {
 function resumeInterval() {
     boolTimer = false;
     Dpause1.textContent= 'pause'
-    // if     (gameMode == 1) challenge1Action();
-    // else if(gameMode == 2) challenge2Action();
+    if     (gameMode == 1) RandomAnswer();
+    else if(gameMode == 2) RandomAnswer();
 }
 
 function pauseButtonAction() {
