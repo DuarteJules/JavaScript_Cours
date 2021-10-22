@@ -10,5 +10,7 @@ function Lpop(){
     function ouvre(){
         
        let Lopen = alert('Dommage ! ne te décourage pas !')
+       window.location.reload()
     }
+
 }

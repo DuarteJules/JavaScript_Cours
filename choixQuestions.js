@@ -9,10 +9,8 @@ let jrep2
 let jrep3
 let jrep4 
 jRandom = getRandomInt(allQuestions.length)
-//attribution des variables
+//attribution des variables pour recup les questions et les réponses
 function Dgetques() {
-    // jRandom = getRandomInt(allQuestions.length)
-    // console.log(allQuestions[jRandom].quizz)
     while (allQuestions[jRandom].quizz == 'pris'){
     jRandom = getRandomInt(allQuestions.length)
     }
